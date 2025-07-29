@@ -151,42 +151,40 @@ export default function Contact() {
                       <FormMessage />
                     </FormItem>
                   )}
-                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
+                />
                 <FormField
                   control={form.control}
                   name="damageType"
                   render={({ field }) => (
                     <FormItem 
-                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
+                      className={`${
                         isDamageTypeOpen 
                           ? 'bg-blue-50 border border-blue-200 shadow-sm' 
                           : 'bg-transparent'
                       }`}
                     >
-                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
-                      <Select 
-                        onValueChange={field.onChange} 
-                        defaultValue={field.value || ""}
-                        onOpenChange={setIsDamageTypeOpen}
-                      >
-                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
-                          <SelectTrigger data-testid="select-damageType" className="bg-white border-gray-300">
+                      <FormLabel>Vrsta škode</FormLabel>
+                      <FormControl>
+                        <Select 
+                          onValueChange={field.onChange} 
+                          defaultValue={field.value || ""}
+                          onOpenChange={setIsDamageTypeOpen}
+                        >
+                          <SelectTrigger data-testid="select-damageType" className={`bg-white border-gray-300 transition-all duration-200 ${
+                            isDamageTypeOpen 
+                              ? 'border-blue-400 ring-2 ring-blue-100' 
+                              : 'border-gray-300'
+                          }`}>
                             <SelectValue placeholder="Izberite vrsto škode" />
-                            className={`bg-white border-gray-300 transition-all duration-200 ${
-                              isDamageTypeOpen 
-                                ? 'border-blue-400 ring-2 ring-blue-100' 
-                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
-                            }`}
-                        </FormControl>
-                        <SelectContent className="z-50">
-                          className="z-50 bg-white border border-gray-300 shadow-lg rounded-md max-h-60 overflow-y-auto"
-                          <SelectItem value="delo">Poškodba pri delu</SelectItem>
-                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
-                          <SelectItem value="javne">Nesreča na javnih površinah</SelectItem>
-                          <SelectItem value="moralna">Moralna škoda</SelectItem>
-                          <SelectItem value="drugo">Drugo</SelectItem>
-                        </SelectContent>
-                      </Select>
+                          </SelectTrigger>
+                          <SelectContent className="z-50 bg-white border border-gray-300 shadow-lg rounded-md max-h-60 overflow-y-auto">
+                            <SelectItem value="delo" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Poškodba pri delu</SelectItem>
+                            <SelectItem value="javne" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Nesreča na javnih površinah</SelectItem>
+                            <SelectItem value="moralna" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Moralna škoda</SelectItem>
+                            <SelectItem value="drugo" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Drugo</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
