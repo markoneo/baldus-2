@@ -36,7 +36,7 @@ export default function Services() {
           <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-6">
             PRAVNE STORITVE
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Naredimo več z BALDUS</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Naredimo Več</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Imamo pokrite podrobnosti, da se lahko manj obremenjujete. 
             Različne dejavnosti, povezane s primerom.
