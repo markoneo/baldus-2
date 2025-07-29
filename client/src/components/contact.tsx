@@ -154,7 +154,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Telefon</FormLabel>
                       <FormControl>
-                        <Input type="tel" placeholder="+386 XX XXX XXX" {...field} data-testid="input-phone" />
+                        <Input type="tel" placeholder="+386 XX XXX XXX" {...field} value={field.value || ""} data-testid="input-phone" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -166,7 +166,7 @@ export default function Contact() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Vrsta škode</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
                         <FormControl>
                           <SelectTrigger data-testid="select-damageType">
                             <SelectValue placeholder="Izberite vrsto škode" />

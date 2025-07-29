@@ -14,8 +14,8 @@ export const contactMessages = pgTable("contact_messages", {
   firstName: text("first_name").notNull(),
   lastName: text("last_name").notNull(),
   email: text("email").notNull(),
-  phone: text("phone"),
-  damageType: text("damage_type"),
+  phone: text("phone").default(""),
+  damageType: text("damage_type").default(""),
   description: text("description").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
