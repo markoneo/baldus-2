@@ -31,7 +31,7 @@ export default function Testimonials() {
               100+ ZADOVOLJNIH STRANK
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-              Besede pohvale o naši prisotnosti
+              Zaupanje, potrjeno z izkušnjami
             </h2>
             
             {/* Large testimonial */}
