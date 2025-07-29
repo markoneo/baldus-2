@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <BaldusLogo className="text-white mb-6" />
+            <BaldusLogo className="text-white mb-6" size="sm" />
             <p className="text-gray-300 mb-4 leading-relaxed">
               Strokovno uveljavljanje odškodnin za prometne nesreče, poškodbe pri delu, 
               zdravniške napake in druge škodne dogodke.
