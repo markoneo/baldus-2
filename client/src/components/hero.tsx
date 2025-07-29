@@ -73,7 +73,7 @@ export default function Hero() {
               className="rounded-3xl shadow-lg w-full object-cover"
               data-testid="img-hero-consultation"
             />
-            <img 
+          </div>
         </div>
       </div>
     </section>
