@@ -58,14 +58,8 @@ export default function Testimonials() {
           </div>
         </div>
         
-        {/* Navigation */}
-        <div className="flex justify-center items-center mt-16 space-x-4">
-          <button className="w-12 h-12 border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-50">
-            <ArrowLeft className="w-5 h-5 text-gray-600" />
-          </button>
-          <div className="flex space-x-2">
-            <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-            <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+        <div className="relative">
+        </div>
           </div>
           <button className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700">
             <ArrowRight className="w-5 h-5 text-white" />
