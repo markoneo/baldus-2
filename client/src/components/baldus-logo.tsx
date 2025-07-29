@@ -7,27 +7,18 @@ export default function BaldusLogo({ className = "", size = "md" }: BaldusLogoPr
   const sizeClasses = {
     sm: {
       container: "space-x-2",
-      topBar: "w-12 h-1",
-      bottomBar: "w-16 h-1", 
-      columns: { heights: ["h-8", "h-6", "h-7", "h-5"], widths: "w-1" },
-      text: { main: "text-sm", sub: "text-xs" },
-      spacing: { topMargin: "mb-1", bottomMargin: "mb-2", columnSpacing: "space-x-0.5" }
+      svgSize: "w-8 h-8",
+      text: { main: "text-sm", sub: "text-xs" }
     },
     md: {
       container: "space-x-3",
-      topBar: "w-16 h-1.5",
-      bottomBar: "w-20 h-1.5",
-      columns: { heights: ["h-12", "h-9", "h-10", "h-7"], widths: "w-1.5" },
-      text: { main: "text-xl", sub: "text-xs" },
-      spacing: { topMargin: "mb-1", bottomMargin: "mb-2", columnSpacing: "space-x-0.5" }
+      svgSize: "w-12 h-12",
+      text: { main: "text-xl", sub: "text-xs" }
     },
     lg: {
       container: "space-x-4",
-      topBar: "w-20 h-2",
-      bottomBar: "w-24 h-2",
-      columns: { heights: ["h-16", "h-12", "h-14", "h-10"], widths: "w-2" },
-      text: { main: "text-2xl", sub: "text-sm" },
-      spacing: { topMargin: "mb-1.5", bottomMargin: "mb-3", columnSpacing: "space-x-1" }
+      svgSize: "w-16 h-16",
+      text: { main: "text-2xl", sub: "text-sm" }
     }
   };
 
@@ -35,22 +26,48 @@ export default function BaldusLogo({ className = "", size = "md" }: BaldusLogoPr
 
   return (
     <div className={`flex items-center ${currentSize.container} ${className}`}>
-      <div className="flex flex-col items-start">
-        {/* Top shorter bar */}
-        <div className={currentSize.spacing.topMargin}>
-          <div className={`${currentSize.topBar} bg-gold`}></div>
-        </div>
-        {/* Bottom longer bar */}
-        <div className={currentSize.spacing.bottomMargin}>
-          <div className={`${currentSize.bottomBar} bg-gold`}></div>
-        </div>
-        {/* Four vertical columns with decreasing heights matching the logo */}
-        <div className={`flex ${currentSize.spacing.columnSpacing}`}>
-          {currentSize.columns.heights.map((height, index) => (
-            <div key={index} className={`${currentSize.columns.widths} ${height} bg-gold`}></div>
-          ))}
-        </div>
-      </div>
+      <svg 
+        className={currentSize.svgSize} 
+        viewBox="0 0 100 120" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Top shorter horizontal bar */}
+        <rect x="0" y="0" width="60" height="8" fill="currentColor" className="text-gold" />
+        
+        {/* Bottom longer horizontal bar */}
+        <rect x="0" y="15" width="80" height="8" fill="currentColor" className="text-gold" />
+        
+        {/* Four angled vertical elements - recreating the slanted pattern */}
+        {/* First column - tallest */}
+        <polygon 
+          points="0,30 8,30 20,120 12,120" 
+          fill="currentColor" 
+          className="text-gold" 
+        />
+        
+        {/* Second column - medium */}
+        <polygon 
+          points="15,30 23,30 32,100 24,100" 
+          fill="currentColor" 
+          className="text-gold" 
+        />
+        
+        {/* Third column - medium-short */}
+        <polygon 
+          points="30,30 38,30 44,110 36,110" 
+          fill="currentColor" 
+          className="text-gold" 
+        />
+        
+        {/* Fourth column - shortest */}
+        <polygon 
+          points="45,30 53,30 56,90 48,90" 
+          fill="currentColor" 
+          className="text-gold" 
+        />
+      </svg>
+      
       <div className="text-navy">
         <div className={`${currentSize.text.main} font-bold tracking-wide`}>BALDUS</div>
         <div className={`${currentSize.text.sub} font-light tracking-widest`}>ODŠKODNINE</div>
