@@ -33,10 +33,6 @@ export default function Testimonials() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
               Besede pohvale o naši prisotnosti
             </h2>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-              Vaša predanost postavitvi strank na prvo mesto je očitna v vsakem 
-              vidiku vaše spletne prisotnosti. Od uporabniku prijazen spletne strani.
-            </p>
             
             {/* Large testimonial */}
             <div className="bg-orange-50 rounded-3xl p-8 relative">
