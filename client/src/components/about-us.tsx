@@ -1,4 +1,6 @@
 import { CheckCircle } from "lucide-react";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function AboutUs() {
   const commitments = [
@@ -81,12 +83,6 @@ export default function AboutUs() {
                 <span className="text-sm font-medium">Hitrost</span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
             <img 
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
               alt="Professional legal team consultation" 
