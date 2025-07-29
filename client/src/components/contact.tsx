@@ -63,26 +63,26 @@ export default function Contact() {
             <h3 className="text-3xl font-bold text-gray-900 mb-8">Stopite v stik z nami</h3>
             <div className="space-y-8">
               <div className="flex items-center space-x-4" data-testid="contact-phone">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <Phone className="text-blue-600 w-6 h-6" />
+                <div className="w-12 h-12 bg-gold-light rounded-xl flex items-center justify-center">
+                  <Phone className="text-gold w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Telefon</div>
-                  <a href="tel:+38641288455" className="text-blue-600 hover:underline font-medium">+386 41 288 455</a>
+                  <a href="tel:+38641288455" className="text-gold hover:underline font-medium">+386 41 288 455</a>
                 </div>
               </div>
               <div className="flex items-center space-x-4" data-testid="contact-email">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <Mail className="text-blue-600 w-6 h-6" />
+                <div className="w-12 h-12 bg-gold-light rounded-xl flex items-center justify-center">
+                  <Mail className="text-gold w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">E-pošta</div>
-                  <a href="mailto:info@baldus.si" className="text-blue-600 hover:underline font-medium">info@baldus.si</a>
+                  <a href="mailto:info@baldus.si" className="text-gold hover:underline font-medium">info@baldus.si</a>
                 </div>
               </div>
               <div className="flex items-center space-x-4" data-testid="contact-hours">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <Clock className="text-blue-600 w-6 h-6" />
+                <div className="w-12 h-12 bg-gold-light rounded-xl flex items-center justify-center">
+                  <Clock className="text-gold w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Delovni čas</div>
