@@ -40,8 +40,8 @@ export default function AboutUs() {
           </div>
           <div className="order-1 lg:order-2">
             <img 
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Professional legal team consultation" 
+              src="https://baldus.sirv.com/canstockphoto-3-3357160048.jpg" 
+              alt="Legal professionals consultation" 
               className="rounded-xl shadow-lg w-full"
             />
           </div>
