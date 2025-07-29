@@ -1,4 +1,4 @@
-import { Car, HardHat, Stethoscope, AlertTriangle, Heart, HelpCircle } from "lucide-react";
+import { Car, HardHat, Stethoscope, AlertTriangle, Heart, HelpCircle, ArrowRight } from "lucide-react";
 
 export default function Services() {
   const services = [
