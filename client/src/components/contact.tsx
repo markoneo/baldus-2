@@ -185,6 +185,7 @@ export default function Contact() {
                             <SelectItem value="moralna" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Moralna škoda</SelectItem>
                             <SelectItem value="drugo" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Drugo</SelectItem>
                           </SelectContent>
+                          </SelectContent>
                         </Select>
                       </FormControl>
                       <FormMessage />
