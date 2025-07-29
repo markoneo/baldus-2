@@ -68,7 +68,7 @@ export default function Hero() {
           </div>
           <div className="relative">
             <img 
-              src="/attached_assets/Workers_Compensation_law_marketing_ideas%20copy.jpg" 
+              src="https://baldus.sirv.com/Workers_Compensation_law_marketing_ideas.jpg" 
               alt="Workers compensation law marketing" 
               className="rounded-3xl shadow-lg w-full object-cover"
               data-testid="img-hero-consultation"
