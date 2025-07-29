@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calculator, Phone } from "lucide-react";
+import { Calculator, Phone, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -10,50 +10,84 @@ export default function Hero() {
   };
 
   return (
-    <section id="domov" className="bg-gradient-to-br from-gray-50/50 to-white section-padding">
+    <section id="domov" className="bg-white py-20 lg:py-32">
       <div className="container-modern">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h1 className="text-hero text-navy mb-8">
-              Vaša pravica, naša skrb – z nami zanesljivo do{" "}
-              <span className="text-gold">pravične odškodnine</span>
+            <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-6">
+              PRAVIČNA OBRAVNAVA
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
+              Vaša pravica, naša skrb – z nami do{" "}
+              <span className="text-gray-700">pravične odškodnine</span>
             </h1>
-            <p className="text-xl text-slate mb-8 leading-relaxed max-w-lg">
+            <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg">
               Utrpeli ste škodo, pa ne veste, kako uveljaviti svojo pravico? Pri Baldus odškodnine vam 
               pomagamo hitro, strokovno in brez tveganja do odškodnine, ki vam pripada.
             </p>
-            <p className="text-lg text-slate mb-12 max-w-lg">
-              Delujemo transparentno, brez skritih stroškov in vas spremljamo od prvega klica do končnega izplačila.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6">
+            
+            {/* Email Input */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 max-w-md">
+              <input 
+                type="email" 
+                placeholder="Vaš email naslov"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
               <Button
-                onClick={scrollToContact}
-                className="btn-primary"
-                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center justify-center transition-colors"
                 data-testid="button-free-analysis"
+                onClick={scrollToContact}
               >
-                <Calculator className="mr-3 h-5 w-5" />
-                Brezplačna analiza primera
+                <ArrowRight className="h-5 w-5" />
               </Button>
+            </div>
+            
+            {/* Rating */}
+            <div className="flex items-center gap-3">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-gold text-xl">★</span>
+                ))}
+              </div>
+              <span className="text-gray-600">Ocenilo nas je več kot 100 zadovoljnih strank</span>
+            </div>
+            
+            <div className="mt-8">
               <Button
                 variant="outline"
-                className="btn-secondary"
-                size="lg"
+                className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg"
                 asChild
                 data-testid="button-call-hero"
               >
                 <a href="tel:+38641288455">
-                  <Phone className="mr-3 h-5 w-5" />
+                  <Phone className="mr-2 h-4 w-4" />
                   Pokličite nas
                 </a>
               </Button>
             </div>
           </div>
-          <div className="lg:pl-12">
+          <div className="relative">
+            {/* Chat Mockup */}
+            <div className="bg-gray-50 rounded-3xl p-8 relative">
+              <div className="space-y-4">
+                <div className="bg-white rounded-2xl p-4 shadow-sm max-w-xs">
+                  <p className="text-gray-700">Dober dan! Kako vam lahko pomagam?</p>
+                </div>
+                <div className="bg-blue-600 text-white rounded-2xl p-4 shadow-sm max-w-xs ml-auto">
+                  <p>Potrebujem pomoč pri prometni nesreči...</p>
+                </div>
+                <div className="bg-white rounded-2xl p-4 shadow-sm max-w-xs">
+                  <p className="text-gray-700">Razumem. Ali lahko podate nekaj podrobnosti o vašem primeru?</p>
+                </div>
+                <div className="bg-blue-600 text-white rounded-2xl p-4 shadow-sm max-w-xs ml-auto">
+                  <p>Vidim. Spori glede pogodb lahko...</p>
+                </div>
+              </div>
+            </div>
             <img 
               src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
               alt="Professional legal consultation" 
-              className="rounded-3xl shadow-2xl w-full hover:shadow-3xl transition-all duration-500"
+              className="absolute top-8 right-8 w-48 h-48 object-cover rounded-full border-4 border-white shadow-lg"
               data-testid="img-hero"
             />
           </div>

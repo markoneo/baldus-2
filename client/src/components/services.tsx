@@ -30,39 +30,51 @@ export default function Services() {
   ];
 
   return (
-    <section id="storitve" className="section-padding bg-white">
+    <section id="storitve" className="py-20 lg:py-32 bg-gray-50">
       <div className="container-modern">
-        <div className="text-center mb-12">
-          <h2 className="text-section-title text-navy mb-6">Vrste odškodnin</h2>
-          <p className="text-slate text-xl max-w-2xl mx-auto">Vrste primerov, ki jih obravnavamo</p>
+        <div className="text-center mb-16">
+          <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-6">
+            PRAVNE STORITVE
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Naredimo več z BALDUS</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Imamo pokrite podrobnosti, da se lahko manj obremenjujete. 
+            Različne dejavnosti, povezane s primerom.
+          </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div 
                 key={index}
-                className="card-modern p-8 group"
+                className="text-center group"
                 data-testid={`service-${index}`}
               >
-                <div className="w-16 h-16 bg-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <IconComponent className="text-white w-8 h-8" />
+                <div className="w-24 h-24 mx-auto mb-8 relative">
+                  {/* Illustration placeholder */}
+                  <div className="w-full h-full bg-blue-100 rounded-2xl flex items-center justify-center">
+                    <IconComponent className="text-blue-600 w-12 h-12" />
+                  </div>
                 </div>
-                <h3 className="text-subsection text-navy mb-4">{service.title}</h3>
-                <p className="text-slate leading-relaxed text-lg">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
+                <button className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                  Več o {service.title.toLowerCase()}
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </button>
               </div>
             );
           })}
-          <div className="card-modern p-8 bg-gradient-to-br from-gold-light to-gold/10 border-gold/20 group">
-            <div className="w-16 h-16 bg-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <HelpCircle className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-subsection text-navy mb-4">Niste prepričani?</h3>
-            <p className="text-slate leading-relaxed text-lg">
-              Kontaktirajte nas za brezplačno analizo vašega primera. Pomagali bomo ugotoviti, 
-              ali imate pravico do odškodnine.
-            </p>
-          </div>
+        </div>
+        
+        {/* Navigation dots */}
+        <div className="flex justify-center items-center mt-16 space-x-3">
+          <button className="w-3 h-3 rounded-full bg-blue-600"></button>
+          <button className="w-3 h-3 rounded-full bg-gray-300"></button>
+          <button className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+            <ArrowRight className="w-4 h-4 text-white" />
+          </button>
         </div>
       </div>
     </section>

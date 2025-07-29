@@ -19,58 +19,58 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-md border-b border-gray-100/50 sticky top-0 z-50 transition-all duration-300">
+    <header className="bg-white/95 backdrop-blur-md sticky top-0 z-50">
       <div className="container-modern">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center py-4">
           <BaldusLogo size="lg" />
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-10">
+          <nav className="hidden lg:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('domov')}
-              className="text-navy hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
+              className="text-gray-600 hover:text-navy transition-colors font-medium"
               data-testid="nav-home"
             >
               Domov
             </button>
             <button
               onClick={() => scrollToSection('o-nas')}
-              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
+              className="text-gray-600 hover:text-navy transition-colors font-medium"
               data-testid="nav-about"
             >
               O nas
             </button>
             <button
               onClick={() => scrollToSection('storitve')}
-              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
+              className="text-gray-600 hover:text-navy transition-colors font-medium"
               data-testid="nav-services"
             >
               Storitve
             </button>
             <button
               onClick={() => scrollToSection('postopek')}
-              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
+              className="text-gray-600 hover:text-navy transition-colors font-medium"
               data-testid="nav-process"
             >
               Postopek
             </button>
             <button
               onClick={() => scrollToSection('mnenja')}
-              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
+              className="text-gray-600 hover:text-navy transition-colors font-medium"
               data-testid="nav-testimonials"
             >
               Mnenja
             </button>
             <button
               onClick={() => scrollToSection('vprasanja')}
-              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
+              className="text-gray-600 hover:text-navy transition-colors font-medium"
               data-testid="nav-faq"
             >
               FAQ
             </button>
             <button
               onClick={() => scrollToSection('kontakt')}
-              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
+              className="text-gray-600 hover:text-navy transition-colors font-medium"
               data-testid="nav-contact"
             >
               Kontakt
@@ -81,11 +81,11 @@ export default function Header() {
           <div className="hidden lg:block">
             <Button
               asChild
-              className="btn-primary"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-colors"
               data-testid="button-call"
             >
               <a href="tel:+38641288455">
-                <Phone className="mr-3 h-4 w-4" />
+                <Phone className="mr-2 h-4 w-4" />
                 041 288 455
               </a>
             </Button>
@@ -110,53 +110,53 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100/50">
+        <div className="lg:hidden bg-white border-t">
           <div className="px-4 py-4 space-y-3">
             <button
               onClick={() => scrollToSection('domov')}
-              className="block w-full text-left text-navy font-medium"
+              className="block w-full text-left text-gray-700 font-medium"
               data-testid="mobile-nav-home"
             >
               Domov
             </button>
             <button
               onClick={() => scrollToSection('o-nas')}
-              className="block w-full text-left text-slate"
+              className="block w-full text-left text-gray-600"
               data-testid="mobile-nav-about"
             >
               O nas
             </button>
             <button
               onClick={() => scrollToSection('storitve')}
-              className="block w-full text-left text-slate"
+              className="block w-full text-left text-gray-600"
               data-testid="mobile-nav-services"
             >
               Storitve
             </button>
             <button
               onClick={() => scrollToSection('postopek')}
-              className="block w-full text-left text-slate"
+              className="block w-full text-left text-gray-600"
               data-testid="mobile-nav-process"
             >
               Kako delujemo
             </button>
             <button
               onClick={() => scrollToSection('mnenja')}
-              className="block w-full text-left text-slate"
+              className="block w-full text-left text-gray-600"
               data-testid="mobile-nav-testimonials"
             >
               Mnenja
             </button>
             <button
               onClick={() => scrollToSection('vprasanja')}
-              className="block w-full text-left text-slate"
+              className="block w-full text-left text-gray-600"
               data-testid="mobile-nav-faq"
             >
               Vprašanja
             </button>
             <button
               onClick={() => scrollToSection('kontakt')}
-              className="block w-full text-left text-slate"
+              className="block w-full text-left text-gray-600"
               data-testid="mobile-nav-contact"
             >
               Kontakt
@@ -164,7 +164,7 @@ export default function Header() {
             <div className="pt-3">
               <Button
                 asChild
-                className="btn-primary w-full"
+                className="bg-blue-600 hover:bg-blue-700 text-white w-full py-2 rounded-full"
                 data-testid="mobile-button-call"
               >
                 <a href="tel:+38641288455">
