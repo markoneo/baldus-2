@@ -58,14 +58,6 @@ export default function Testimonials() {
           </div>
         </div>
         
-        <div className="relative">
-        </div>
-          </div>
-          <button className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700">
-            <ArrowRight className="w-5 h-5 text-white" />
-          </button>
-        </div>
-        
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
