@@ -1,7 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+  const [displayText, setDisplayText] = useState("");
+  const fullText = "Vaša pravica, naša skrb – z nami do pravične odškodnine";
+  const highlightStartIndex = fullText.indexOf("pravične odškodnine");
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setDisplayText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 50); // 50ms delay between each character
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
+  const renderTypedText = () => {
+    const beforeHighlight = displayText.slice(0, highlightStartIndex);
+    const highlightText = displayText.slice(highlightStartIndex);
+    
+    return (
+      <>
+        {beforeHighlight}
+        {highlightText && (
+          <span className="text-gray-700">{highlightText}</span>
+        )}
+        <span className="animate-pulse">|</span>
+      </>
+    );
+  };
+
   const scrollToContact = () => {
     const element = document.getElementById('kontakt');
     if (element) {
@@ -17,9 +51,8 @@ export default function Hero() {
             <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-6">
               PRAVIČNA OBRAVNAVA
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
-              Vaša pravica, naša skrb – z nami do{" "}
-              <span className="text-gray-700">pravične odškodnine</span>
+            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8 min-h-[1.2em]">
+              {renderTypedText()}
             </h1>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg">
               Utrpeli ste škodo, pa ne veste, kako uveljaviti svojo pravico? Pri Baldus odškodnine vam 
