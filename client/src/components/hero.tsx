@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calculator, Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const scrollToContact = () => {
