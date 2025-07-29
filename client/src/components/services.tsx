@@ -59,10 +59,6 @@ export default function Services() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-                <button className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
-                  Več o {service.title.toLowerCase()}
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </button>
               </div>
             );
           })}
