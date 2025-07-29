@@ -111,6 +111,8 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="space-y-12">
+        </div>
+      </div>
     </section>
   );
 }
