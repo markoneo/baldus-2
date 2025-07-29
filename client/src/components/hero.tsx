@@ -67,23 +67,12 @@ export default function Hero() {
             </div>
           </div>
           <div className="relative">
-            {/* Chat Mockup */}
-            <div className="bg-gray-50 rounded-3xl p-8 relative">
-              <div className="space-y-4">
-                <div className="bg-white rounded-2xl p-4 shadow-sm max-w-xs">
-                  <p className="text-gray-700">Dober dan! Kako vam lahko pomagam?</p>
-                </div>
-                <div className="bg-blue-600 text-white rounded-2xl p-4 shadow-sm max-w-xs ml-auto">
-                  <p>Potrebujem pomoč pri prometni nesreči...</p>
-                </div>
-                <div className="bg-white rounded-2xl p-4 shadow-sm max-w-xs">
-                  <p className="text-gray-700">Razumem. Ali lahko podate nekaj podrobnosti o vašem primeru?</p>
-                </div>
-                <div className="bg-blue-600 text-white rounded-2xl p-4 shadow-sm max-w-xs ml-auto">
-                  <p>Vidim. Spori glede pogodb lahko...</p>
-                </div>
-              </div>
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+              alt="Professional legal consultation meeting" 
+              className="rounded-3xl shadow-lg w-full object-cover"
+              data-testid="img-hero-consultation"
+            />
             <img 
               src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
               alt="Professional legal consultation" 
