@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function Testimonials() {
   const testimonials = [
@@ -71,10 +71,14 @@ export default function Testimonials() {
             <ArrowRight className="w-5 h-5 text-white" />
           </button>
         </div>
-      </div>
-    </section>
-  );
-}
+        
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-gold fill-current" />
+                ))}
                 </div>
               </div>
               <p className="text-slate mb-6 italic">"{testimonial.text}"</p>
