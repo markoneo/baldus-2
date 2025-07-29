@@ -6,13 +6,13 @@ interface BaldusLogoProps {
 export default function BaldusLogo({ className = "", size = "md" }: BaldusLogoProps) {
   const sizeClasses = {
     sm: {
-      logoSize: "h-16 w-auto",
+      logoSize: "h-8 w-auto",
     },
     md: {
-      logoSize: "h-24 w-auto",
+      logoSize: "h-12 w-auto",
     },
     lg: {
-      logoSize: "h-32 w-auto",
+      logoSize: "h-16 w-auto",
     }
   };
 
@@ -23,7 +23,7 @@ export default function BaldusLogo({ className = "", size = "md" }: BaldusLogoPr
       <img 
         src="https://baldus.sirv.com/Baldus%20ods%CC%8Ckodnine%20logo%20(2).png"
         alt="BALDUS Odškodnine" 
-        className="h-32 w-auto pt-[0px] pb-[0px] pl-[0px] pr-[0px] ml-[1px] mr-[1px] mt-[-30px] mb-[-30px]"
+        className={currentSize.logoSize}
       />
     </div>
   );
