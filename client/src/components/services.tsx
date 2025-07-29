@@ -52,8 +52,8 @@ export default function Services() {
                 data-testid={`service-${index}`}
               >
                 <div className="w-24 h-24 mx-auto mb-8 relative">
-                  <div className="w-full h-full bg-blue-100 rounded-2xl flex items-center justify-center">
-                    <IconComponent className="text-blue-600 w-12 h-12" />
+                  <div className="w-full h-full bg-gold-light rounded-2xl flex items-center justify-center">
+                    <IconComponent className="text-gold w-12 h-12" />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
