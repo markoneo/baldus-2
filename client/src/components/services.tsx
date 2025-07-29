@@ -73,6 +73,3 @@ export default function Services() {
           </button>
         </div>
       </div>
-    </section>
-  );
-}
