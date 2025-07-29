@@ -10,22 +10,22 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-navy text-white py-12">
+    <footer className="bg-navy text-white py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="sm:col-span-2 lg:col-span-2">
             <BaldusLogo className="text-white mb-6" size="sm" />
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            <p className="text-gray-300 mb-4 leading-relaxed text-sm sm:text-base">
               Strokovno uveljavljanje odškodnin za prometne nesreče, poškodbe pri delu, 
               zdravniške napake in druge škodne dogodke.
             </p>
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-sm sm:text-base">
               Vaša pravica, naša skrb – z nami zanesljivo do pravične odškodnine.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Storitve</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="font-semibold mb-4 text-base sm:text-lg">Storitve</h4>
+            <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
               <li>
                 <button 
                   onClick={() => scrollToSection('storitve')} 
@@ -74,8 +74,8 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Kontakt</h4>
-            <ul className="space-y-2 text-gray-300">
+            <h4 className="font-semibold mb-4 text-base sm:text-lg">Kontakt</h4>
+            <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
               <li className="flex items-center space-x-2">
                 <Phone className="text-gold w-4 h-4" />
                 <a 
@@ -103,7 +103,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-700 mt-6 lg:mt-8 pt-6 lg:pt-8 text-center text-gray-400 text-sm">
           <p>&copy; 2024 BALDUS Odškodnine. Vse pravice pridržane.</p>
         </div>
       </div>

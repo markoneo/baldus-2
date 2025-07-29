@@ -44,30 +44,30 @@ export default function Hero() {
   };
 
   return (
-    <section id="domov" className="bg-white py-20 lg:py-32">
-      <div className="container-modern">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+    <section id="domov" className="bg-white py-12 sm:py-16 lg:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           <div>
             <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-6">
               PRAVIČNA OBRAVNAVA
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8 min-h-[1.2em]">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6 lg:mb-8 min-h-[1.2em]">
               {renderTypedText()}
             </h1>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg">
+            <p className="text-lg sm:text-xl text-gray-600 mb-8 lg:mb-12 leading-relaxed">
               Utrpeli ste škodo, pa ne veste, kako uveljaviti svojo pravico? Pri Baldus odškodnine vam 
               pomagamo hitro, strokovno in brez tveganja do odškodnine, ki vam pripada.
             </p>
             
             {/* Email Input */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8 max-w-md">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6 lg:mb-8">
               <input 
                 type="email" 
                 placeholder="Vaš email naslov"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
               />
               <Button
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center justify-center transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center justify-center transition-colors sm:w-auto w-full"
                 data-testid="button-free-analysis"
                 onClick={scrollToContact}
               >
@@ -76,19 +76,19 @@ export default function Hero() {
             </div>
             
             {/* Rating */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-6 lg:mb-8">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-gold text-xl">★</span>
                 ))}
               </div>
-              <span className="text-gray-600">Ocenilo nas je več kot 100 zadovoljnih strank</span>
+              <span className="text-gray-600 text-sm sm:text-base">Ocenilo nas je več kot 100 zadovoljnih strank</span>
             </div>
             
-            <div className="mt-8">
+            <div>
               <Button
                 variant="outline"
-                className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg"
+                className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg w-full sm:w-auto"
                 asChild
                 data-testid="button-call-hero"
               >
@@ -99,11 +99,11 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative mt-8 lg:mt-0">
             <img 
               src="https://baldus.sirv.com/Workers_Compensation_law_marketing_ideas.jpg" 
               alt="Workers compensation law marketing" 
-              className="rounded-3xl shadow-lg w-full object-cover"
+              className="rounded-2xl lg:rounded-3xl shadow-lg w-full object-cover"
               data-testid="img-hero-consultation"
             />
           </div>

@@ -55,49 +55,49 @@ export default function Contact() {
   };
 
   return (
-    <section id="kontakt" className="py-20 lg:py-32 bg-gray-900">
-      <div className="container-modern">
-          <div className="grid lg:grid-cols-2 gap-20">
+    <section id="kontakt" className="py-12 sm:py-16 lg:py-32 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-20">
           {/* Contact Information */}
           <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-8">Stopite v stik z nami</h3>
-            <div className="space-y-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 lg:mb-8">Stopite v stik z nami</h3>
+            <div className="space-y-6 lg:space-y-8">
               <div className="flex items-center space-x-4" data-testid="contact-phone">
-                <div className="w-12 h-12 bg-gold-light rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gold-light rounded-xl flex items-center justify-center flex-shrink-0">
                   <Phone className="text-gold w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-medium text-gray-900">Telefon</div>
-                  <a href="tel:+38641288455" className="text-gold hover:underline font-medium">+386 41 288 455</a>
+                  <div className="font-medium text-white">Telefon</div>
+                  <a href="tel:+38641288455" className="text-gold hover:underline font-medium text-lg">+386 41 288 455</a>
                 </div>
               </div>
               <div className="flex items-center space-x-4" data-testid="contact-email">
-                <div className="w-12 h-12 bg-gold-light rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gold-light rounded-xl flex items-center justify-center flex-shrink-0">
                   <Mail className="text-gold w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-medium text-gray-900">E-pošta</div>
+                  <div className="font-medium text-white">E-pošta</div>
                   <a href="mailto:info@baldus.si" className="text-gold hover:underline font-medium">info@baldus.si</a>
                 </div>
               </div>
               <div className="flex items-center space-x-4" data-testid="contact-hours">
-                <div className="w-12 h-12 bg-gold-light rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gold-light rounded-xl flex items-center justify-center flex-shrink-0">
                   <Clock className="text-gold w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-medium text-gray-900">Delovni čas</div>
-                  <div className="text-gray-600">pon–pet: 8.00–17.00</div>
+                  <div className="font-medium text-white">Delovni čas</div>
+                  <div className="text-gray-300">pon–pet: 8.00–17.00</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div id="contact-form" className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Pošljite nam sporočilo</h3>
+          <div id="contact-form" className="bg-gray-50 rounded-2xl p-6 sm:p-8 mt-8 lg:mt-0">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 lg:mb-8">Pošljite nam sporočilo</h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="contact-form">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6" data-testid="contact-form">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <FormField
                     control={form.control}
                     name="firstName"
@@ -105,7 +105,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Ime *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Vaše ime" {...field} data-testid="input-firstName" className="bg-white border-gray-300" />
+                          <Input placeholder="Vaše ime" {...field} data-testid="input-firstName" className="bg-white border-gray-300 text-base" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -118,7 +118,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Priimek *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Vaš priimek" {...field} data-testid="input-lastName" className="bg-white border-gray-300" />
+                          <Input placeholder="Vaš priimek" {...field} data-testid="input-lastName" className="bg-white border-gray-300 text-base" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -132,7 +132,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>E-pošta *</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="vasa.eposta@example.com" {...field} data-testid="input-email" className="bg-white border-gray-300" />
+                        <Input type="email" placeholder="vasa.eposta@example.com" {...field} data-testid="input-email" className="bg-white border-gray-300 text-base" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -145,7 +145,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Telefon</FormLabel>
                       <FormControl>
-                        <Input type="tel" placeholder="+386 XX XXX XXX" {...field} value={field.value || ""} data-testid="input-phone" className="bg-white border-gray-300" />
+                        <Input type="tel" placeholder="+386 XX XXX XXX" {...field} value={field.value || ""} data-testid="input-phone" className="bg-white border-gray-300 text-base" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -159,7 +159,7 @@ export default function Contact() {
                       <FormLabel>Vrsta škode</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
                         <FormControl>
-                          <SelectTrigger data-testid="select-damageType" className="bg-white border-gray-300">
+                          <SelectTrigger data-testid="select-damageType" className="bg-white border-gray-300 text-base">
                             <SelectValue placeholder="Izberite vrsto škode" />
                           </SelectTrigger>
                         </FormControl>
@@ -184,27 +184,27 @@ export default function Contact() {
                       <FormLabel>Opis primera *</FormLabel>
                       <FormControl>
                         <Textarea 
-                          rows={4} 
+                          rows={3} 
                           placeholder="Opišite vaš primer..." 
                           {...field} 
                           data-testid="textarea-description"
-                          className="bg-white border-gray-300"
+                          className="bg-white border-gray-300 text-base resize-none"
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <div className="flex items-start space-x-3">
+                <div className="flex items-start space-x-3 pt-2">
                   <Checkbox required data-testid="checkbox-consent" />
-                  <label className="text-sm text-slate">
+                  <label className="text-sm text-gray-600 leading-relaxed">
                     Soglašam s <a href="#" className="text-gold hover:underline">pogoji uporabe</a> in{" "}
                     <a href="#" className="text-gold hover:underline">varstvom osebnih podatkov</a>.*
                   </label>
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg text-base sm:text-lg"
                   disabled={contactMutation.isPending}
                   data-testid="button-submit"
                 >

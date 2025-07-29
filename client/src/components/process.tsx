@@ -28,20 +28,20 @@ export default function Process() {
   ];
 
   return (
-    <section id="postopek" className="py-16 bg-navy text-white">
+    <section id="postopek" className="py-12 sm:py-16 bg-navy text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Kako delujemo</h2>
-          <p className="text-gray-300 text-lg">Postopek pridobitve odškodnine v 5 korakih</p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Kako delujemo</h2>
+          <p className="text-gray-300 text-base sm:text-lg">Postopek pridobitve odškodnine v 5 korakih</p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
           {steps.map((step, index) => (
             <div key={index} className="text-center" data-testid={`step-${index}`}>
-              <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">{step.number}</span>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-lg sm:text-xl">{step.number}</span>
               </div>
-              <h3 className="font-semibold mb-2">{step.title}</h3>
-              <p className="text-gray-300 text-sm">{step.description}</p>
+              <h3 className="font-semibold mb-2 text-sm sm:text-base">{step.title}</h3>
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>
