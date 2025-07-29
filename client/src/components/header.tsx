@@ -19,58 +19,58 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-white/95 backdrop-blur-md border-b border-gray-100/50 sticky top-0 z-50 transition-all duration-300">
+      <div className="container-modern">
         <div className="flex justify-between items-center h-20">
           <BaldusLogo size="lg" />
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-10">
             <button
               onClick={() => scrollToSection('domov')}
-              className="text-navy hover:text-gold transition-colors font-medium"
+              className="text-navy hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
               data-testid="nav-home"
             >
               Domov
             </button>
             <button
               onClick={() => scrollToSection('o-nas')}
-              className="text-slate hover:text-gold transition-colors"
+              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
               data-testid="nav-about"
             >
               O nas
             </button>
             <button
               onClick={() => scrollToSection('storitve')}
-              className="text-slate hover:text-gold transition-colors"
+              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
               data-testid="nav-services"
             >
               Storitve
             </button>
             <button
               onClick={() => scrollToSection('postopek')}
-              className="text-slate hover:text-gold transition-colors"
+              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
               data-testid="nav-process"
             >
-              Kako delujemo
+              Postopek
             </button>
             <button
               onClick={() => scrollToSection('mnenja')}
-              className="text-slate hover:text-gold transition-colors"
+              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
               data-testid="nav-testimonials"
             >
               Mnenja
             </button>
             <button
               onClick={() => scrollToSection('vprasanja')}
-              className="text-slate hover:text-gold transition-colors"
+              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
               data-testid="nav-faq"
             >
-              Vprašanja
+              FAQ
             </button>
             <button
               onClick={() => scrollToSection('kontakt')}
-              className="text-slate hover:text-gold transition-colors"
+              className="text-slate hover:text-gold transition-all duration-200 font-medium text-sm uppercase tracking-wide hover:scale-105"
               data-testid="nav-contact"
             >
               Kontakt
@@ -81,11 +81,11 @@ export default function Header() {
           <div className="hidden lg:block">
             <Button
               asChild
-              className="bg-gold hover:bg-gold-light text-white font-medium"
+              className="btn-primary"
               data-testid="button-call"
             >
               <a href="tel:+38641288455">
-                <Phone className="mr-2 h-4 w-4" />
+                <Phone className="mr-3 h-4 w-4" />
                 041 288 455
               </a>
             </Button>
@@ -110,7 +110,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100">
+        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100/50">
           <div className="px-4 py-4 space-y-3">
             <button
               onClick={() => scrollToSection('domov')}
@@ -164,7 +164,7 @@ export default function Header() {
             <div className="pt-3">
               <Button
                 asChild
-                className="bg-gold text-white"
+                className="btn-primary w-full"
                 data-testid="mobile-button-call"
               >
                 <a href="tel:+38641288455">

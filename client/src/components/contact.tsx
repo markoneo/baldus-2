@@ -55,57 +55,57 @@ export default function Contact() {
   };
 
   return (
-    <section id="kontakt" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="kontakt" className="section-padding bg-gradient-to-br from-gray-50 to-white">
+      <div className="container-modern">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-navy mb-4">Kontakt</h2>
-          <p className="text-slate text-lg">Želite nasvet ali želite oddati svoj primer?</p>
+          <h2 className="text-section-title text-navy mb-6">Kontakt</h2>
+          <p className="text-slate text-xl max-w-2xl mx-auto">Želite nasvet ali želite oddati svoj primer?</p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-navy mb-6">Stopite v stik z nami</h3>
-            <div className="space-y-6">
+            <h3 className="text-subsection text-navy mb-8">Stopite v stik z nami</h3>
+            <div className="space-y-8">
               <div className="flex items-center space-x-4" data-testid="contact-phone">
-                <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center">
-                  <Phone className="text-white w-6 h-6" />
+                <div className="w-16 h-16 bg-gold rounded-2xl flex items-center justify-center">
+                  <Phone className="text-white w-8 h-8" />
                 </div>
                 <div>
-                  <div className="font-semibold text-navy">Telefon</div>
-                  <a href="tel:+38641288455" className="text-gold hover:underline">+386 41 288 455</a>
+                  <div className="font-semibold text-navy text-lg">Telefon</div>
+                  <a href="tel:+38641288455" className="text-gold hover:underline text-xl font-medium">+386 41 288 455</a>
                 </div>
               </div>
               <div className="flex items-center space-x-4" data-testid="contact-email">
-                <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center">
-                  <Mail className="text-white w-6 h-6" />
+                <div className="w-16 h-16 bg-gold rounded-2xl flex items-center justify-center">
+                  <Mail className="text-white w-8 h-8" />
                 </div>
                 <div>
-                  <div className="font-semibold text-navy">E-pošta</div>
-                  <a href="mailto:info@baldus.si" className="text-gold hover:underline">info@baldus.si</a>
+                  <div className="font-semibold text-navy text-lg">E-pošta</div>
+                  <a href="mailto:info@baldus.si" className="text-gold hover:underline text-xl font-medium">info@baldus.si</a>
                 </div>
               </div>
               <div className="flex items-center space-x-4" data-testid="contact-hours">
-                <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center">
-                  <Clock className="text-white w-6 h-6" />
+                <div className="w-16 h-16 bg-gold rounded-2xl flex items-center justify-center">
+                  <Clock className="text-white w-8 h-8" />
                 </div>
                 <div>
-                  <div className="font-semibold text-navy">Delovni čas</div>
-                  <div className="text-slate">pon–pet: 8.00–17.00</div>
+                  <div className="font-semibold text-navy text-lg">Delovni čas</div>
+                  <div className="text-slate text-xl">pon–pet: 8.00–17.00</div>
                 </div>
               </div>
             </div>
             
-            <div className="mt-8 p-6 bg-gold-light rounded-xl">
-              <h4 className="font-semibold text-navy mb-2">Z veseljem pomagamo tudi vam</h4>
-              <p className="text-slate">Stopite v stik z nami – pomagali smo že številnim strankam do pravične odškodnine.</p>
+            <div className="mt-12 p-8 bg-gradient-to-br from-gold-light to-gold/10 rounded-3xl border border-gold/20">
+              <h4 className="font-semibold text-navy mb-4 text-xl">Z veseljem pomagamo tudi vam</h4>
+              <p className="text-slate text-lg leading-relaxed">Stopite v stik z nami – pomagali smo že številnim strankam do pravične odškodnine.</p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h3 className="text-xl font-bold text-navy mb-6">Pošljite nam sporočilo</h3>
+          <div className="card-modern p-10">
+            <h3 className="text-subsection text-navy mb-8">Pošljite nam sporočilo</h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="contact-form">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8" data-testid="contact-form">
                 <div className="grid md:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
@@ -212,11 +212,11 @@ export default function Contact() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-gold hover:bg-gold-light text-white font-semibold py-4"
+                  className="w-full btn-primary py-4"
                   disabled={contactMutation.isPending}
                   data-testid="button-submit"
                 >
-                  <Send className="mr-2 h-5 w-5" />
+                  <Send className="mr-3 h-5 w-5" />
                   {contactMutation.isPending ? "Pošiljam..." : "Pošljite sporočilo"}
                 </Button>
               </form>

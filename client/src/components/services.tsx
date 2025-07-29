@@ -30,35 +30,35 @@ export default function Services() {
   ];
 
   return (
-    <section id="storitve" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="storitve" className="section-padding bg-white">
+      <div className="container-modern">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-navy mb-4">Vrste odškodnin</h2>
-          <p className="text-slate text-lg">Vrste primerov, ki jih obravnavamo</p>
+          <h2 className="text-section-title text-navy mb-6">Vrste odškodnin</h2>
+          <p className="text-slate text-xl max-w-2xl mx-auto">Vrste primerov, ki jih obravnavamo</p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div 
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-shadow"
+                className="card-modern p-8 group"
                 data-testid={`service-${index}`}
               >
-                <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mb-4">
-                  <IconComponent className="text-white w-6 h-6" />
+                <div className="w-16 h-16 bg-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <IconComponent className="text-white w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold text-navy mb-3">{service.title}</h3>
-                <p className="text-slate leading-relaxed">{service.description}</p>
+                <h3 className="text-subsection text-navy mb-4">{service.title}</h3>
+                <p className="text-slate leading-relaxed text-lg">{service.description}</p>
               </div>
             );
           })}
-          <div className="bg-gold-light border border-gold rounded-xl p-6 hover:shadow-xl transition-shadow">
-            <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mb-4">
-              <HelpCircle className="text-white w-6 h-6" />
+          <div className="card-modern p-8 bg-gradient-to-br from-gold-light to-gold/10 border-gold/20 group">
+            <div className="w-16 h-16 bg-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <HelpCircle className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-semibold text-navy mb-3">Niste prepričani?</h3>
-            <p className="text-slate leading-relaxed">
+            <h3 className="text-subsection text-navy mb-4">Niste prepričani?</h3>
+            <p className="text-slate leading-relaxed text-lg">
               Kontaktirajte nas za brezplačno analizo vašega primera. Pomagali bomo ugotoviti, 
               ali imate pravico do odškodnine.
             </p>

@@ -4,31 +4,31 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(222, 47%, 11%);
+  --foreground: hsl(222, 44%, 18%);
   --muted: hsl(210, 40%, 98%);
-  --muted-foreground: hsl(215, 16%, 47%);
+  --muted-foreground: hsl(215, 20%, 55%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 47%, 11%);
+  --popover-foreground: hsl(222, 44%, 18%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 47%, 11%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
+  --card-foreground: hsl(222, 44%, 18%);
+  --border: hsl(214, 20%, 94%);
+  --input: hsl(214, 20%, 96%);
   --primary: hsl(45, 76%, 53%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(210, 40%, 98%);
-  --secondary-foreground: hsl(222, 47%, 11%);
-  --accent: hsl(210, 40%, 98%);
-  --accent-foreground: hsl(222, 47%, 11%);
+  --secondary: hsl(210, 30%, 97%);
+  --secondary-foreground: hsl(222, 44%, 18%);
+  --accent: hsl(210, 30%, 97%);
+  --accent-foreground: hsl(222, 44%, 18%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(222, 47%, 11%);
+  --ring: hsl(45, 76%, 53%);
   --radius: 0.75rem;
   
   /* Custom colors for BALDUS theme */
   --gold: hsl(45, 76%, 53%);
-  --gold-light: hsl(48, 85%, 76%);
-  --navy: hsl(222, 47%, 11%);
-  --slate: hsl(215, 16%, 47%);
+  --gold-light: hsl(48, 70%, 88%);
+  --navy: hsl(222, 44%, 18%);
+  --slate: hsl(215, 20%, 55%);
 }
 
 .dark {
@@ -59,12 +59,56 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground leading-relaxed;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
   
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Modern smooth scrolling */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+/* Modern Button Styles */
+.btn-primary {
+  @apply bg-gold hover:bg-gold/90 text-white font-medium px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply border-2 border-gold text-gold hover:bg-gold hover:text-white font-medium px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
+}
+
+/* Modern Card Styles */
+.card-modern {
+  @apply bg-white rounded-2xl border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Typography Scale */
+.text-hero {
+  @apply text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+}
+
+.text-section-title {
+  @apply text-3xl lg:text-4xl font-bold leading-tight tracking-tight;
+}
+
+.text-subsection {
+  @apply text-xl lg:text-2xl font-semibold leading-snug;
+}
+
+/* Modern spacing system */
+.section-padding {
+  @apply py-20 lg:py-32;
+}
+
+.container-modern {
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
 }
 
 /* Custom utility classes */
