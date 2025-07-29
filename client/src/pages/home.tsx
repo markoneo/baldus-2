@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import WhyChooseUs from "@/components/why-choose-us";
+import MissionPromise from "@/components/mission-promise";
 import AboutUs from "@/components/about-us";
 import Services from "@/components/services";
 import Process from "@/components/process";
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <WhyChooseUs />
+      <MissionPromise />
       <AboutUs />
       <Services />
       <Process />
