@@ -6,13 +6,13 @@ interface BaldusLogoProps {
 export default function BaldusLogo({ className = "", size = "md" }: BaldusLogoProps) {
   const sizeClasses = {
     sm: {
-      logoSize: "h-8 w-auto",
-    },
-    md: {
       logoSize: "h-12 w-auto",
     },
-    lg: {
+    md: {
       logoSize: "h-16 w-auto",
+    },
+    lg: {
+      logoSize: "h-24 w-auto",
     }
   };
 
