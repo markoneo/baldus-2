@@ -178,13 +178,12 @@ export default function Contact() {
                             <SelectValue placeholder="Izberite vrsto škode" />
                           </SelectTrigger>
                           <SelectContent className="z-50 bg-white border border-gray-300 shadow-lg rounded-md max-h-60 overflow-y-auto">
+                            <SelectItem value="prometna" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Prometna nesreča</SelectItem>
                             <SelectItem value="delo" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Poškodba pri delu</SelectItem>
+                            <SelectItem value="zdravniška" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Zdravniška napaka</SelectItem>
                             <SelectItem value="javne" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Nesreča na javnih površinah</SelectItem>
                             <SelectItem value="moralna" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Moralna škoda</SelectItem>
                             <SelectItem value="drugo" className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150">Drugo</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
