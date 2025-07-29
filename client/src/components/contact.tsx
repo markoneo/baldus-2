@@ -163,7 +163,7 @@ export default function Contact() {
                             <SelectValue placeholder="Izberite vrsto škode" />
                           </SelectTrigger>
                         </FormControl>
-                        <SelectContent className="z-50">
+                        <SelectContent>
                           <SelectItem value="prometna">Prometna nesreča</SelectItem>
                           <SelectItem value="delo">Poškodba pri delu</SelectItem>
                           <SelectItem value="zdravniška">Zdravniška napaka</SelectItem>
