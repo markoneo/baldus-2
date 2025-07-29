@@ -16,6 +16,7 @@ import type { InsertContactMessage } from "@shared/schema";
 
 export default function Contact() {
   const { toast } = useToast();
+  const [isDamageTypeOpen, setIsDamageTypeOpen] = useState(false);
 
   const form = useForm<InsertContactMessage>({
     resolver: zodResolver(insertContactMessageSchema),
@@ -150,23 +151,37 @@ export default function Contact() {
                       <FormMessage />
                     </FormItem>
                   )}
-                />
+                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
                 <FormField
                   control={form.control}
                   name="damageType"
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Vrsta škode</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
-                        <FormControl>
+                    <FormItem 
+                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
+                        isDamageTypeOpen 
+                          ? 'bg-blue-50 border border-blue-200 shadow-sm' 
+                          : 'bg-transparent'
+                      }`}
+                    >
+                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
+                      <Select 
+                        onValueChange={field.onChange} 
+                        defaultValue={field.value || ""}
+                        onOpenChange={setIsDamageTypeOpen}
+                      >
+                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
                           <SelectTrigger data-testid="select-damageType" className="bg-white border-gray-300">
                             <SelectValue placeholder="Izberite vrsto škode" />
-                          </SelectTrigger>
+                            className={`bg-white border-gray-300 transition-all duration-200 ${
+                              isDamageTypeOpen 
+                                ? 'border-blue-400 ring-2 ring-blue-100' 
+                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
+                            }`}
                         </FormControl>
                         <SelectContent className="z-50">
-                          <SelectItem value="prometna">Prometna nesreča</SelectItem>
+                          className="z-50 bg-white border border-gray-300 shadow-lg rounded-md max-h-60 overflow-y-auto"
                           <SelectItem value="delo">Poškodba pri delu</SelectItem>
-                          <SelectItem value="zdravniška">Zdravniška napaka</SelectItem>
+                            className="bg-white hover:bg-blue-50 focus:bg-blue-50 cursor-pointer p-3 transition-colors duration-150"
                           <SelectItem value="javne">Nesreča na javnih površinah</SelectItem>
                           <SelectItem value="moralna">Moralna škoda</SelectItem>
                           <SelectItem value="drugo">Drugo</SelectItem>
