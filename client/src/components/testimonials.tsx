@@ -25,7 +25,7 @@ export default function Testimonials() {
   return (
     <section id="mnenja" className="py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="max-w-4xl mx-auto">
           <div>
             <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-6">
               100+ ZADOVOLJNIH STRANK
@@ -46,15 +46,6 @@ export default function Testimonials() {
                 začetna ponudba zavarovalnice. Njihova strokovna pomoč je bila neprecenljiva.
               </p>
             </div>
-          </div>
-          
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=face" 
-              alt="Zadovoljna stranka" 
-              className="w-full max-w-md rounded-3xl object-cover"
-              data-testid="testimonial-image"
-            />
           </div>
         </div>
         
