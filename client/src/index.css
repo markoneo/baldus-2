@@ -3,54 +3,54 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(222, 44%, 18%);
-  --muted: hsl(210, 40%, 98%);
-  --muted-foreground: hsl(215, 20%, 55%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 44%, 18%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 44%, 18%);
-  --border: hsl(214, 20%, 94%);
-  --input: hsl(214, 20%, 96%);
-  --primary: hsl(45, 76%, 53%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(210, 30%, 97%);
-  --secondary-foreground: hsl(222, 44%, 18%);
-  --accent: hsl(210, 30%, 97%);
-  --accent-foreground: hsl(222, 44%, 18%);
-  --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(45, 76%, 53%);
+  --background: 0 0% 100%;
+  --foreground: 222 44% 18%;
+  --muted: 210 40% 98%;
+  --muted-foreground: 215 20% 55%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 44% 18%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 44% 18%;
+  --border: 214 20% 94%;
+  --input: 214 20% 96%;
+  --primary: 45 76% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 30% 97%;
+  --secondary-foreground: 222 44% 18%;
+  --accent: 210 30% 97%;
+  --accent-foreground: 222 44% 18%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 45 76% 53%;
   --radius: 0.75rem;
   
   /* Custom colors for BALDUS theme */
-  --gold: hsl(45, 76%, 53%);
-  --gold-light: hsl(48, 70%, 88%);
-  --navy: hsl(222, 44%, 18%);
-  --slate: hsl(215, 20%, 55%);
+  --gold: 45 76% 53%;
+  --gold-light: 48 70% 88%;
+  --navy: 222 44% 18%;
+  --slate: 215 20% 55%;
 }
 
 .dark {
-  --background: hsl(222, 84%, 5%);
-  --foreground: hsl(210, 40%, 98%);
-  --muted: hsl(222, 84%, 5%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --popover: hsl(222, 84%, 5%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --card: hsl(222, 84%, 5%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217, 32%, 17%);
-  --input: hsl(217, 32%, 17%);
-  --primary: hsl(45, 76%, 53%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --accent: hsl(217, 32%, 17%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(212, 72%, 59%);
+  --background: 222 84% 5%;
+  --foreground: 210 40% 98%;
+  --muted: 222 84% 5%;
+  --muted-foreground: 215 20% 65%;
+  --popover: 222 84% 5%;
+  --popover-foreground: 210 40% 98%;
+  --card: 222 84% 5%;
+  --card-foreground: 210 40% 98%;
+  --border: 217 32% 17%;
+  --input: 217 32% 17%;
+  --primary: 45 76% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 217 32% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 217 32% 17%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 212 72% 59%;
 }
 
 @layer base {
@@ -109,45 +109,4 @@
 
 .container-modern {
   @apply max-w-7xl mx-auto px-6 lg:px-8;
-}
-
-/* Custom utility classes */
-.gold {
-  color: var(--gold);
-}
-
-.bg-gold {
-  background-color: var(--gold);
-}
-
-.bg-gold-light {
-  background-color: var(--gold-light);
-}
-
-.text-navy {
-  color: var(--navy);
-}
-
-.bg-navy {
-  background-color: var(--navy);
-}
-
-.text-slate {
-  color: var(--slate);
-}
-
-.border-gold {
-  border-color: var(--gold);
-}
-
-.hover\:bg-gold:hover {
-  background-color: var(--gold);
-}
-
-.hover\:bg-gold-light:hover {
-  background-color: var(--gold-light);
-}
-
-.hover\:text-gold:hover {
-  color: var(--gold);
 }

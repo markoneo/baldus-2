@@ -44,6 +44,12 @@ export default {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+        },
+        navy: "hsl(var(--navy))",
+        slate: "hsl(var(--slate))",
         chart: {
           "1": "var(--chart-1)",
           "2": "var(--chart-2)",
