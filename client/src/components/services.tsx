@@ -52,7 +52,6 @@ export default function Services() {
                 data-testid={`service-${index}`}
               >
                 <div className="w-24 h-24 mx-auto mb-8 relative">
-                  {/* Illustration placeholder */}
                   <div className="w-full h-full bg-blue-100 rounded-2xl flex items-center justify-center">
                     <IconComponent className="text-blue-600 w-12 h-12" />
                   </div>
@@ -62,15 +61,6 @@ export default function Services() {
               </div>
             );
           })}
-        </div>
-        
-        {/* Navigation dots */}
-        <div className="flex justify-center items-center mt-16 space-x-3">
-          <button className="w-3 h-3 rounded-full bg-blue-600"></button>
-          <button className="w-3 h-3 rounded-full bg-gray-300"></button>
-          <button className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-            <ArrowRight className="w-4 h-4 text-white" />
-          </button>
         </div>
       </div>
     </section>
