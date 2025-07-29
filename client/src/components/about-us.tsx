@@ -91,7 +91,6 @@ export default function AboutUs() {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-navy mb-6">Kdo smo?</h2>
             <p className="text-slate mb-6 leading-relaxed">
               Ekipa Baldus odškodnine je neodvisna ekipa pravnih strokovnjakov, ki si prizadeva za 
               pošteno obravnavo vseh, ki so utrpeli telesno, psihično ali materialno škodo.
@@ -111,7 +110,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      </div>
+        <div className="space-y-12">
     </section>
   );
 }
