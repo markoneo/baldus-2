@@ -12,7 +12,7 @@ export default function BaldusLogo({ className = "", size = "md" }: BaldusLogoPr
       logoSize: "h-16 w-auto",
     },
     lg: {
-      logoSize: "h-24 w-auto",
+      logoSize: "h-28 w-auto",
     }
   };
 
