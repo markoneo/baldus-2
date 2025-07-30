@@ -59,6 +59,10 @@ export default function Hero() {
               pomagamo hitro, strokovno in brez tveganja do odškodnine, ki vam pripada.
             </p>
             
+            <p className="text-sm text-gray-600 mb-3">
+              Kontaktirajte nas za brezplačno analizo vašega primera.
+            </p>
+            
             {/* Email Input */}
             <div className="flex flex-col sm:flex-row gap-4 mb-6 lg:mb-8">
               <input 
