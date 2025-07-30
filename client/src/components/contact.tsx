@@ -222,7 +222,7 @@ export default function Contact() {
                 />
                 <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                   <div className="flex items-start space-x-3">
-                    <Checkbox required data-testid="checkbox-consent" className="mt-1 border-gray-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 rounded-full" />
+                    <Checkbox required data-testid="checkbox-consent" className="mt-0.5 h-4 w-4 border-gray-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 rounded-full flex-shrink-0" />
                     <label className="text-sm text-gray-600 leading-relaxed">
                       Soglašam s <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">pogoji uporabe</a> in{" "}
                       <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">varstvom osebnih podatkov</a>.*
