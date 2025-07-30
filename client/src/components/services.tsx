@@ -36,7 +36,7 @@ export default function Services() {
           <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-6">
             PRAVNE STORITVE
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6">Naredimo Več</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6">Pri nas poskrbimo za vse – od prvega nasveta do zaključka postopka</h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
             Imamo pokrite podrobnosti, da se lahko manj obremenjujete. 
             Različne dejavnosti, povezane s primerom.
