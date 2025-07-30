@@ -38,8 +38,7 @@ export default function Services() {
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6">Pri nas poskrbimo za vse – od prvega nasveta do zaključka postopka</h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Imamo pokrite podrobnosti, da se lahko manj obremenjujete. 
-            Različne dejavnosti, povezane s primerom.
+            Naše znanje in izkušnje s področja odškodnin vam pomagajo do zneska, ki vam pripada.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
