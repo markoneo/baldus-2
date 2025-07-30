@@ -22,7 +22,7 @@ export default function Header() {
     <header className="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
-          <BaldusLogo size="sm" className="flex-shrink-0" />
+          <BaldusLogo size="md" className="flex-shrink-0" />
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
