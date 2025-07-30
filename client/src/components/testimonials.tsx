@@ -9,10 +9,10 @@ export default function Testimonials() {
       text: "Po prometni nesreči sem imela blažje bolečine v vratu, zato sem šla na urgenco in nato še na kontrolni pregled. Nisem pričakovala visokega zneska, zato sem bila res prijetno presenečena, ko sem s pomočjo ekipe Baldus odškodnine prejela kar 1.800 € odškodnine. Celoten postopek je bil enostaven, hiter in strokovno voden. Priporočam vsem, ki se znajdete v takšni situaciji!"
     },
     {
-      name: "Tatjana",
-      location: "Ljubljana",
-      initial: "T",
-      text: "Imela sem zapleten primer z zdravniško napako. Zelo spoštljiv odnos in vrhunska pravna pomoč."
+      name: "Matej",
+      location: "Koper",
+      initial: "M",
+      text: "Doživel sem prometno nesrečo z motorjem, pri kateri sem si poškodoval ramo in sem moral na operacijo. Baldus odškodnine so zame uredili celoten postopek in vložili odškodninski zahtevek. Na koncu sem prejel 35.000 € odškodnine, kar je veliko več, kot sem si sploh predstavljal, da mi pripada. Zelo sem zadovoljen s strokovnostjo in podporo, ki sem jo prejel. Priporočam vsakemu, ki potrebuje pomoč pri odškodnini!"
     },
     {
       name: "Ivan",
