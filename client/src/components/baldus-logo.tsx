@@ -21,7 +21,7 @@ export default function BaldusLogo({ className = "", size = "md" }: BaldusLogoPr
   return (
     <div className={`flex items-center ${className}`}>
       <img 
-        src="https://baldus.sirv.com/Baldus_logo_resized.png"
+        src="https://baldus.sirv.com/Baldus_logo_resized_larger.png"
         alt="BALDUS Odškodnine" 
         className={currentSize.logoSize}
       />
