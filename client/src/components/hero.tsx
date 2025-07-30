@@ -54,7 +54,7 @@ export default function Hero() {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="absolute inset-0 bg-white/90"></div>
+      <div className="absolute inset-0 bg-white/60"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center relative z-10">
           <div>
