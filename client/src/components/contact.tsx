@@ -220,15 +220,13 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                  <div className="flex items-start space-x-3">
-                    <Checkbox required data-testid="checkbox-consent" className="mt-1 h-3 w-3 border-gray-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 rounded-full flex-shrink-0" />
-                    <label className="text-xs text-gray-600 leading-relaxed">
-                      Soglašam s <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">pogoji uporabe</a> in{" "}
-                      <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">varstvom osebnih podatkov</a>.*
-                    </label>
-                  </div>
-                </div>
+                <button 
+                  type="button"
+                  className="w-full bg-gray-100 hover:bg-gray-200 rounded-full py-3 px-4 text-xs text-gray-700 transition-colors duration-200"
+                  data-testid="consent-button"
+                >
+                  Soglašam s pogoji uporabe in varstvom osebnih podatkov *
+                </button>
                 <Button 
                   type="submit" 
                   className="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white h-12 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
