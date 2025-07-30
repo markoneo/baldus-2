@@ -93,19 +93,27 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div id="contact-form" className="bg-gray-50 rounded-xl p-4 sm:p-6 mt-8 lg:mt-0">
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Pošljite nam sporočilo</h3>
+          <div id="contact-form" className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 mt-8 lg:mt-0">
+            <div className="border-b border-gray-100 pb-4 mb-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Pošljite nam sporočilo</h3>
+              <p className="text-sm text-gray-500">Izpolnite obrazec spodaj in kontaktirali vas bomo v 24 urah.</p>
+            </div>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4" data-testid="contact-form">
-                <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5" data-testid="contact-form">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Ime *</FormLabel>
+                        <FormLabel className="text-sm font-medium text-gray-700">Ime *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Vaše ime" {...field} data-testid="input-firstName" className="bg-white border-gray-300 text-sm h-9" />
+                          <Input 
+                            placeholder="Vaše ime" 
+                            {...field} 
+                            data-testid="input-firstName" 
+                            className="h-11 bg-gray-50 border-gray-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 rounded-lg text-gray-900 placeholder:text-gray-400" 
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -116,9 +124,14 @@ export default function Contact() {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Priimek *</FormLabel>
+                        <FormLabel className="text-sm font-medium text-gray-700">Priimek *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Vaš priimek" {...field} data-testid="input-lastName" className="bg-white border-gray-300 text-sm h-9" />
+                          <Input 
+                            placeholder="Vaš priimek" 
+                            {...field} 
+                            data-testid="input-lastName" 
+                            className="h-11 bg-gray-50 border-gray-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 rounded-lg text-gray-900 placeholder:text-gray-400" 
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -130,9 +143,15 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>E-pošta *</FormLabel>
+                      <FormLabel className="text-sm font-medium text-gray-700">E-pošta *</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="vasa.eposta@example.com" {...field} data-testid="input-email" className="bg-white border-gray-300 text-sm h-9" />
+                        <Input 
+                          type="email" 
+                          placeholder="vasa.eposta@example.com" 
+                          {...field} 
+                          data-testid="input-email" 
+                          className="h-11 bg-gray-50 border-gray-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 rounded-lg text-gray-900 placeholder:text-gray-400" 
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -143,9 +162,15 @@ export default function Contact() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Telefon</FormLabel>
+                      <FormLabel className="text-sm font-medium text-gray-700">Telefon</FormLabel>
                       <FormControl>
-                        <Input type="tel" placeholder="+386 XX XXX XXX" {...field} value={field.value || ""} data-testid="input-phone" className="bg-white border-gray-300 text-sm h-9" />
+                        <Input 
+                          type="tel" 
+                          placeholder="+386 XX XXX XXX" 
+                          {...field} 
+                          value={field.value || ""} 
+                          data-testid="input-phone" 
+                          className="h-11 bg-gray-50 border-gray-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 rounded-lg text-gray-900 placeholder:text-gray-400" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -156,14 +181,14 @@ export default function Contact() {
                   name="damageType"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Vrsta škode</FormLabel>
+                      <FormLabel className="text-sm font-medium text-gray-700">Vrsta škode</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
                         <FormControl>
-                          <SelectTrigger data-testid="select-damageType" className="bg-white border-gray-300 text-sm h-9">
+                          <SelectTrigger data-testid="select-damageType" className="h-11 bg-gray-50 border-gray-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 rounded-lg text-gray-900">
                             <SelectValue placeholder="Izberite vrsto škode" />
                           </SelectTrigger>
                         </FormControl>
-                        <SelectContent>
+                        <SelectContent className="bg-white border-gray-200 shadow-lg rounded-lg">
                           <SelectItem value="prometna">Prometna nesreča</SelectItem>
                           <SelectItem value="delo">Poškodba pri delu</SelectItem>
                           <SelectItem value="zdravniška">Zdravniška napaka</SelectItem>
@@ -181,36 +206,48 @@ export default function Contact() {
                   name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Opis primera *</FormLabel>
+                      <FormLabel className="text-sm font-medium text-gray-700">Opis primera *</FormLabel>
                       <FormControl>
                         <Textarea 
-                          rows={2} 
+                          rows={3} 
                           placeholder="Opišite vaš primer..." 
                           {...field} 
                           data-testid="textarea-description"
-                          className="bg-white border-gray-300 text-sm resize-none"
+                          className="bg-gray-50 border-gray-200 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 rounded-lg text-gray-900 placeholder:text-gray-400 resize-none min-h-[80px]"
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <div className="flex items-start space-x-2 pt-1">
-                  <Checkbox required data-testid="checkbox-consent" />
-                  <label className="text-sm text-gray-600 leading-relaxed">
-                    Soglašam s <a href="#" className="text-gold hover:underline">pogoji uporabe</a> in{" "}
-                    <a href="#" className="text-gold hover:underline">varstvom osebnih podatkov</a>.*
-                  </label>
+                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                  <div className="flex items-start space-x-3">
+                    <Checkbox required data-testid="checkbox-consent" className="mt-1 border-gray-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" />
+                    <label className="text-sm text-gray-600 leading-relaxed">
+                      Soglašam s <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">pogoji uporabe</a> in{" "}
+                      <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline transition-colors">varstvom osebnih podatkov</a>.*
+                    </label>
+                  </div>
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg text-sm h-9"
+                  className="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white h-12 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={contactMutation.isPending}
                   data-testid="button-submit"
                 >
-                  <Send className="mr-3 h-5 w-5" />
-                  {contactMutation.isPending ? "Pošiljam..." : "Pošljite sporočilo"}
-                </Button>
+                  {contactMutation.isPending ? (
+                    <div className="flex items-center">
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      Pošiljam...
+                    </div>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" />
+                      Pošljite sporočilo
+                    </>
+                  )}
+                  </label>
+                </div>
               </form>
             </Form>
           </div>
