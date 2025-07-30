@@ -3,10 +3,10 @@ import { Star, ArrowLeft, ArrowRight } from "lucide-react";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Marko",
-      location: "Domžale",
-      initial: "M",
-      text: "Zahvaljujoč ekipi Baldus odškodnine sem po prometni nesreči prejel skoraj trikrat več, kot je bila začetna ponudba zavarovalnice."
+      name: "Nina",
+      location: "Vrhnika", 
+      initial: "N",
+      text: "Po prometni nesreči sem imela blažje bolečine v vratu, zato sem šla na urgenco in nato še na kontrolni pregled. Nisem pričakovala visokega zneska, zato sem bila res prijetno presenečena, ko sem s pomočjo ekipe Baldus odškodnine prejela kar 1.800 € odškodnine. Celoten postopek je bil enostaven, hiter in strokovno voden. Priporočam vsem, ki se znajdete v takšni situaciji!"
     },
     {
       name: "Tatjana",
