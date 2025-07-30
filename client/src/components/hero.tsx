@@ -44,9 +44,19 @@ export default function Hero() {
   };
 
   return (
-    <section id="domov" className="bg-white py-12 sm:py-16 lg:py-32">
+    <section 
+      id="domov" 
+      className="relative py-12 sm:py-16 lg:py-32 bg-white"
+      style={{
+        backgroundImage: `url('https://baldus.sirv.com/ChatGPT%20Image%20Jul%2030%2C%202025%2C%2010_07_51%20PM.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-white/90"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center relative z-10">
           <div>
             <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-6">
               PRAVIČNA OBRAVNAVA
