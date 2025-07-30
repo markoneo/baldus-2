@@ -1,5 +1,5 @@
 import BaldusLogo from "./baldus-logo";
-import { Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -101,6 +101,29 @@ export default function Footer() {
                 <span>pon–pet: 8.00–17.00</span>
               </li>
             </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4 text-base sm:text-lg">Sledite nam</h4>
+            <div className="flex space-x-4">
+              <a 
+                href="https://www.instagram.com/baldusodskodnine/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gold rounded-full flex items-center justify-center hover:bg-gold-light transition-colors"
+                data-testid="footer-instagram"
+              >
+                <Instagram className="text-white w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=61578402737662" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gold rounded-full flex items-center justify-center hover:bg-gold-light transition-colors"
+                data-testid="footer-facebook"
+              >
+                <Facebook className="text-white w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-6 lg:mt-8 pt-6 lg:pt-8 text-center text-gray-400 text-sm">
