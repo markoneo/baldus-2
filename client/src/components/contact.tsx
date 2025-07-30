@@ -247,7 +247,6 @@ export default function Contact() {
                     </>
                   )}
                 </Button>
-                </div>
               </form>
             </Form>
           </div>
