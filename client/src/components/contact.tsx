@@ -246,7 +246,7 @@ export default function Contact() {
                       Pošljite sporočilo
                     </>
                   )}
-                  </label>
+                </Button>
                 </div>
               </form>
             </Form>
