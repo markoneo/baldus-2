@@ -93,11 +93,11 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div id="contact-form" className="bg-gray-50 rounded-2xl p-6 sm:p-8 mt-8 lg:mt-0">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 lg:mb-8">Pošljite nam sporočilo</h3>
+          <div id="contact-form" className="bg-gray-50 rounded-xl p-4 sm:p-6 mt-8 lg:mt-0">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Pošljite nam sporočilo</h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6" data-testid="contact-form">
-                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4" data-testid="contact-form">
+                <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                   <FormField
                     control={form.control}
                     name="firstName"
@@ -105,7 +105,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Ime *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Vaše ime" {...field} data-testid="input-firstName" className="bg-white border-gray-300 text-base" />
+                          <Input placeholder="Vaše ime" {...field} data-testid="input-firstName" className="bg-white border-gray-300 text-sm h-9" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -118,7 +118,7 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Priimek *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Vaš priimek" {...field} data-testid="input-lastName" className="bg-white border-gray-300 text-base" />
+                          <Input placeholder="Vaš priimek" {...field} data-testid="input-lastName" className="bg-white border-gray-300 text-sm h-9" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -132,7 +132,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>E-pošta *</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="vasa.eposta@example.com" {...field} data-testid="input-email" className="bg-white border-gray-300 text-base" />
+                        <Input type="email" placeholder="vasa.eposta@example.com" {...field} data-testid="input-email" className="bg-white border-gray-300 text-sm h-9" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -145,7 +145,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Telefon</FormLabel>
                       <FormControl>
-                        <Input type="tel" placeholder="+386 XX XXX XXX" {...field} value={field.value || ""} data-testid="input-phone" className="bg-white border-gray-300 text-base" />
+                        <Input type="tel" placeholder="+386 XX XXX XXX" {...field} value={field.value || ""} data-testid="input-phone" className="bg-white border-gray-300 text-sm h-9" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -159,7 +159,7 @@ export default function Contact() {
                       <FormLabel>Vrsta škode</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
                         <FormControl>
-                          <SelectTrigger data-testid="select-damageType" className="bg-white border-gray-300 text-base">
+                          <SelectTrigger data-testid="select-damageType" className="bg-white border-gray-300 text-sm h-9">
                             <SelectValue placeholder="Izberite vrsto škode" />
                           </SelectTrigger>
                         </FormControl>
@@ -184,18 +184,18 @@ export default function Contact() {
                       <FormLabel>Opis primera *</FormLabel>
                       <FormControl>
                         <Textarea 
-                          rows={3} 
+                          rows={2} 
                           placeholder="Opišite vaš primer..." 
                           {...field} 
                           data-testid="textarea-description"
-                          className="bg-white border-gray-300 text-base resize-none"
+                          className="bg-white border-gray-300 text-sm resize-none"
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <div className="flex items-start space-x-3 pt-2">
+                <div className="flex items-start space-x-2 pt-1">
                   <Checkbox required data-testid="checkbox-consent" />
                   <label className="text-sm text-gray-600 leading-relaxed">
                     Soglašam s <a href="#" className="text-gold hover:underline">pogoji uporabe</a> in{" "}
@@ -204,7 +204,7 @@ export default function Contact() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg text-base sm:text-lg"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg text-sm h-9"
                   disabled={contactMutation.isPending}
                   data-testid="button-submit"
                 >
